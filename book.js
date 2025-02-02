@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded());
 app.use('/upload', express.static(path.join(__dirname, 'upload')));
 
 const storage = multer.diskStorage({
